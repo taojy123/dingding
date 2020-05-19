@@ -17,7 +17,7 @@ def make_report():
     print('=============== make board =====================')
 
     # cmd = './phantomjs screenshot.js' # linux
-    cmd = 'phantomjs.exe screenshot.js 800 1100 1'  # win
+    cmd = 'phantomjs.exe screenshot.js 800 1100 2'  # win
     print(cmd)
     os.system(cmd)
     time.sleep(1)

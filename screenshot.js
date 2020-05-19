@@ -8,7 +8,7 @@ console.log(args)
 
 width = args[1] || 800
 height = args[2] || 1200
-delay = args[3] || 2
+delay = args[3] || 3
 filename = args[4] || 'report.png'
 
 
