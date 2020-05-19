@@ -6,20 +6,19 @@ var webpage = require('webpage');
 var args = system.args
 console.log(args)
 
-width = args[1] || 800
-height = args[2] || 1200
-delay = args[3] || 3
-filename = args[4] || 'report.png'
+url = args[1] || 'http://taojy123.cn:30416/query/ddc_daily_report/'
+width = args[2] || 800
+height = args[3] || 1200
+delay = args[4] || 3
+filename = args[5] || 'report.png'
 
 
+console.log('url: ' + url)
 console.log('width: ' + width)
 console.log('height: ' + height)
 console.log('delay: ' + delay)
 console.log('filename: ' + filename)
 
-
-var url = 'http://taojy123.cn:30416/query/ddc_daily_report/'
-// var url = 'http://prod.tflag.cn:32370/query/ddc_daily_report/'
 
 var page = webpage.create()
 page.viewportSize = {
@@ -27,8 +26,11 @@ page.viewportSize = {
     height: height
 }
 
+console.log('step 1')
 page.open(url, function (status) {
+	console.log('step 2')
     setTimeout(function(){
+		console.log('step 3')
         // page.render('report.png', {quality: 100})
         page.render(filename)
         console.log('ok')

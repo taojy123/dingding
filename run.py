@@ -9,15 +9,17 @@ import uuid
 
 GROUPS = ['613019056d70a378bf512cbc2cf0bb01128033da092b79fb576a5eb2bc4e7a11']
 
-STORAGE_URL_BASE = 'http://taojy123.cn:30416/query/'
+STORAGE_URL = 'http://taojy123.cn:30416/query/temp<rand>.png'
 
+REPORT_URL = 'http://taojy123.cn:30416/query/ddc_daily_report/'
+# REPORT_URL = 'http://prod.tflag.cn:32370/query/ddc_daily_report/'
 
 
 def make_report():
     print('=============== make board =====================')
 
     # cmd = './phantomjs screenshot.js' # linux
-    cmd = 'phantomjs.exe screenshot.js 800 1100 2'  # win
+    cmd = f'phantomjs.exe screenshot.js {REPORT_URL} 800 1100 300'  # win
     print(cmd)
     os.system(cmd)
     time.sleep(1)
@@ -26,8 +28,7 @@ def make_report():
 
 def push_report():
 
-    rand = uuid.uuid4().hex
-    storage_url = STORAGE_URL_BASE + f'temp{rand}.png'
+    storage_url = STORAGE_URL.replace('<rand>', uuid.uuid4().hex)
     print(storage_url)
 
     files = {
@@ -51,16 +52,19 @@ def push_report():
         print(r.text)
 
 
-while True:
+# while True:
     
-    print('========================')
+#     print('========================')
+#     print(datetime.datetime.now())
     
-    try:
-        make_report()
-        push_report()
-    except Exception as e:
-        print('------------------------')
-        traceback.print_exc()
-        print('------------------------')
+#     try:
+#         make_report()
+#         push_report()
+#     except Exception as e:
+#         print('------------------------')
+#         traceback.print_exc()
+#         print('------------------------')
 
-    time.sleep(300)
+#     time.sleep(3600)
+
+make_report()
