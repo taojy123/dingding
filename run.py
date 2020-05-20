@@ -7,19 +7,21 @@ import re
 import uuid
 
 
-GROUPS = ['613019056d70a378bf512cbc2cf0bb01128033da092b79fb576a5eb2bc4e7a11']
+GROUPS = [
+    # '613019056d70a378bf512cbc2cf0bb01128033da092b79fb576a5eb2bc4e7a11',
+    '7e95f199da13a7483da519274be704c8d0e8557bc55323f67441e9e116fe66c6',
+]
 
 STORAGE_URL = 'http://taojy123.cn:30416/query/temp<rand>.png'
 
-REPORT_URL = 'http://taojy123.cn:30416/query/ddc_daily_report/'
 # REPORT_URL = 'http://prod.tflag.cn:32370/query/ddc_daily_report/'
 
 
-def make_report():
+def make_report(url):
     print('=============== make board =====================')
 
-    # cmd = './phantomjs screenshot.js' # linux
-    cmd = f'phantomjs.exe screenshot.js {REPORT_URL} 800 1100 300'  # win
+    # cmd = './phantomjs screenshot.js'
+    cmd = f'phantomjs screenshot.js {url} 800 1100 300'
     print(cmd)
     os.system(cmd)
     time.sleep(1)
@@ -52,19 +54,18 @@ def push_report():
         print(r.text)
 
 
-# while True:
+while True:
     
-#     print('========================')
-#     print(datetime.datetime.now())
+    print('========================')
+    print(datetime.datetime.now())
     
-#     try:
-#         make_report()
-#         push_report()
-#     except Exception as e:
-#         print('------------------------')
-#         traceback.print_exc()
-#         print('------------------------')
+    try:
+        make_report('http://127.0.0.1:50015/query/ddc_daily_report/')
+        push_report()
+    except Exception as e:
+        print('------------------------')
+        traceback.print_exc()
+        print('------------------------')
 
-#     time.sleep(3600)
+    time.sleep(3600)
 
-make_report()
