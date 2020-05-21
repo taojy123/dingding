@@ -12,8 +12,8 @@ import requests
 
 
 GROUPS = [
-    '613019056d70a378bf512cbc2cf0bb01128033da092b79fb576a5eb2bc4e7a11',
-    # '7e95f199da13a7483da519274be704c8d0e8557bc55323f67441e9e116fe66c6',
+    # '613019056d70a378bf512cbc2cf0bb01128033da092b79fb576a5eb2bc4e7a11',
+    '7e95f199da13a7483da519274be704c8d0e8557bc55323f67441e9e116fe66c6',
 ]
 
 STORAGE_URL = 'http://taojy123.cn:30416/query/temp<rand>.png'
