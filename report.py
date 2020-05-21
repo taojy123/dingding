@@ -16,11 +16,11 @@ GROUPS = [
     '7e95f199da13a7483da519274be704c8d0e8557bc55323f67441e9e116fe66c6',
 ]
 
-STORAGE_URL = 'http://taojy123.cn:30416/query/temp<rand>.png'
-# STORAGE_URL = 'http://tiadmin.jinns.top/query/temp<rand>.png'
+# STORAGE_URL = 'http://taojy123.cn:30416/query/temp<rand>.png'
+STORAGE_URL = 'http://tiadmin.jinns.top/query/temp<rand>.png'
 
-REPORT_URL = 'http://taojy123.cn:30416/query/ddc_daily_report/'
-# REPORT_URL = 'http://tiadmin.jinns.top/query/ddc_daily_report/'
+# REPORT_URL = 'http://taojy123.cn:30416/query/ddc_daily_report/'
+REPORT_URL = 'http://tiadmin.jinns.top/query/ddc_daily_report/'
 
 
 def make_report():

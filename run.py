@@ -12,10 +12,8 @@ report.GROUPS = [
     # 'a8d8a969caebddef437c9582f93da87713b9bd4b0fea6da490ed1f0b7e50ae35',  # DDC 大群
 ]
 
-# report.STORAGE_URL = 'http://taojy123.cn:30416/query/temp<rand>.png'
 report.STORAGE_URL = 'http://tiadmin.jinns.top/query/temp<rand>.png'
 
-# report.REPORT_URL = 'http://taojy123.cn:30416/query/ddc_daily_report/'
 report.REPORT_URL = 'http://tiadmin.jinns.top/query/ddc_daily_report/'
 
 
