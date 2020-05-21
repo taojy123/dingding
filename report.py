@@ -1,4 +1,21 @@
-# echo '106.54.151.153  tiadmin.taiqiyun.net' >> /etc/hosts
+# cd /root/workspace
+# git clone https://github.com/taojy123/dingding
+# cd dingding/
+# chmod a+x phantomjs
+# ln -s /root/workspace/dingding/phantomjs /usr/local/bin/phantomjs
+# cd /usr/share/fonts/truetype
+# mkdir myfonts
+# cd myfonts/
+# cp /root/workspace/dingding/msyh.ttc ./
+# chmod 777 *
+# apt install xfonts-utils
+# mkfontscale
+# mkfontdir
+# apt install fontconfig
+# fc-cache
+# cd workspace/dingding/
+# pip install requests
+# python3 report.py
 
 
 import os
