@@ -9,7 +9,7 @@ import report
 report.GROUPS = [
     # '613019056d70a378bf512cbc2cf0bb01128033da092b79fb576a5eb2bc4e7a11',  # 运营日报测试群
     '7e95f199da13a7483da519274be704c8d0e8557bc55323f67441e9e116fe66c6',  # TiDev
-    # 'a8d8a969caebddef437c9582f93da87713b9bd4b0fea6da490ed1f0b7e50ae35',  # DDC 大群
+    'a8d8a969caebddef437c9582f93da87713b9bd4b0fea6da490ed1f0b7e50ae35',  # DDC 大群
 ]
 
 report.STORAGE_URL = 'http://tiadmin.jinns.top/query/temp<rand>.png'

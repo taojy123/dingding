@@ -1,3 +1,4 @@
+# Ubuntu 18.04
 # cd /root/workspace
 # git clone https://github.com/taojy123/dingding
 # cd dingding/
